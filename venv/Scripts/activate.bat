@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set "VIRTUAL_ENV=F:\My Tasks\Blog-by-Flask\venv"
+set "VIRTUAL_ENV=F:\My Tasks\Blog-by-Flask\Blog-by-Flask\venv"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"
