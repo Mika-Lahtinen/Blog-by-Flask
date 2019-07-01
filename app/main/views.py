@@ -4,6 +4,7 @@ from . import main
 from .forms import NameForm
 from .. import db
 from ..models import User
+from flask_login import login_required
 
 
 @main.route('/', methods=['GET', 'POST'])
@@ -38,3 +39,9 @@ def say_Hello():
 @main.route('/user/<name>')
 def say_Hello_to_User(name):
     return render_template('say_Hello_to_User.html', user_name=name)
+
+
+@main.route('/secret')
+@login_required
+def secret():
+    return 'Authenticated users only!!!'
