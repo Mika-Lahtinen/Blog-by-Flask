@@ -7,7 +7,13 @@ Mika Lahtinen
 
 {% block page_content %}
 <div class="page-header">
-    <h1>Welcome, {% if custom_name %}{{ custom_name }}{% else %}New User{% endif %}!</h1>
+    <h1>Welcome,
+        {% if current_user.is_authenticated %}
+            {{ current_user.is_authenticated }}
+        {% else %}
+            New User
+        {% endif %}!
+    </h1>
     {% if not known %}
     <p>Pleased to meet you!</p>
     {% else %}
