@@ -31,7 +31,7 @@ def say_Hello():
 
         return redirect(url_for('.say_hello'))
 
-    return render_template('say_Hello.html', current_time=datetime.utcnow(),
+    return render_template('index.html', current_time=datetime.utcnow(),
                            custom_name=session.get('name'), initialed_form=form,
                            known=session.get('known', False))
 
